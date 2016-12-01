@@ -262,7 +262,7 @@ Finally, if you're releasing a new version of an existing package, it's your res
 
 Run `use_revdep()` to set up your package with a useful template.
 
-If any packages fail `R CMD check`, you should give package authors at least two weeks to fix the problem before you submit your package to CRAN (you can easily get all maintainer e-mail addresses with `revdep_maintainers()`). After the two weeks is up, re-run the checks, and list any remaining failures in `cran-comments.md`. Each package should be accompanied by a brief explanation that either tells CRAN that it's a false positive in `R CMD check` (e.g. you couldn't install a dependency locally) or that it's a legitimate change in the API (which the maintainer hasn't fixed yet). 
+If any packages fail `R CMD check`, you should give package authors at least two weeks to fix the problem before you submit your package to CRAN (you can easily get all maintainer e-mail addresses with `revdep_maintainers()`). After the two weeks is up, re-run the checks, and list any remaining failures in `cran-comments.md`. Each package for which `revdep_check()` unearth an error (and a warning?) should be accompanied by a brief explanation that either tells CRAN that it's a false positive in `R CMD check` (e.g. you couldn't install a dependency locally) or that it's a legitimate change in the API (which the maintainer hasn't fixed yet). 
 
 Inform CRAN of your release process: "I advised all downstream packages maintainers of these problems two weeks ago". Here's an example from a recent release of dplyr:
 
